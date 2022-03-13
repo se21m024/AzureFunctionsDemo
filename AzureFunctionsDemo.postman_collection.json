@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "6d069a33-eece-4784-b50f-77f29f166bb0",
+		"name": "AzureFunctionsDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://functionappdemoassignment.azurewebsites.net/api/Info",
+					"protocol": "http",
+					"host": [
+						"functionappdemoassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://functionappdemoassignment.azurewebsites.net/api/Customers",
+					"protocol": "http",
+					"host": [
+						"functionappdemoassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Horst\",\r\n    \"Address\": \"Meidling\",\r\n    \"Iban\": \"456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://functionappdemoassignment.azurewebsites.net/api/Customer",
+					"protocol": "http",
+					"host": [
+						"functionappdemoassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Amount\": 45.39,\r\n    \"ExecutionDate\": \"2022-03-13\",\r\n    \"Description\": \"Azure Bill2\",\r\n    \"CreditorIban\": \"1234\",\r\n    \"DebtorIban\": \"526812\"\r\n}"
+				},
+				"url": {
+					"raw": "http://functionappdemoassignment.azurewebsites.net/api/Transaction",
+					"protocol": "http",
+					"host": [
+						"functionappdemoassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://functionappdemoassignment.azurewebsites.net/api/Report?iban=526812&year=2022&month=3",
+					"protocol": "http",
+					"host": [
+						"functionappdemoassignment",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Report"
+					],
+					"query": [
+						{
+							"key": "iban",
+							"value": "526812"
+						},
+						{
+							"key": "year",
+							"value": "2022"
+						},
+						{
+							"key": "month",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
